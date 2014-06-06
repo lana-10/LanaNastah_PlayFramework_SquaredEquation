@@ -1,0 +1,12 @@
+@(message: String)
+@main("Solution"){
+<center>
+
+<h1>@message</h1>
+
+@helper.form(action = routes.Application.index(), 'id -> "form2"){
+<input type="submit" class = "btn primary" value = "back to home">
+}
+</center>
+
+}

@@ -1,0 +1,16 @@
+@(userForm: Form[User])
+@import helper._
+@import helper.twitterBootstrap._
+@main("Squared Equation") {
+<center><h1>Web Application To Solve A Squared Equation...</h1><br/>
+<h2>The equation is of form ax2+bx+c=0</h2><br/>
+<h2>Please enter the required data</h2><br/>
+@helper.form(action = routes.Application.submit(), 'id -> "userForm"){
+@helper.inputText(userForm("a"))
+@helper.inputText(userForm("b"))
+@helper.inputText(userForm("c"))
+<input type="submit" class = "btn primary" value = "send">
+}
+</center>
+
+}
